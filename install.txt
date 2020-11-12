@@ -1,0 +1,33 @@
+https://expressjs.com/en/starter/installing.html
+
+npm init
+
+npm install express
+
+https://www.npmjs.com/package/nunjucks
+
+npm install nunjucks
+
+https://www.npmjs.com/package/nodemon
+
+npm install -D nodemon
+
+
+
+
+"files.associations": {
+  "*.html": "njk"
+},
+
+"vsicons.associations.files": [
+    { "icon": "nunjucks", "extensions": ["njk"] }
+],
+
+
+https://www.npmjs.com/package/browser-sync
+
+npm i browser-sync
+
+https://www.npmjs.com/package/npm-run-all
+
+npm install npm-run-all -dev
