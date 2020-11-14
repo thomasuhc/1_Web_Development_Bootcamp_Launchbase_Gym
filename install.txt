@@ -31,3 +31,7 @@ npm i browser-sync
 https://www.npmjs.com/package/npm-run-all
 
 npm install npm-run-all -dev
+
+https://www.npmjs.com/package/method-override
+
+ npm install method-override
