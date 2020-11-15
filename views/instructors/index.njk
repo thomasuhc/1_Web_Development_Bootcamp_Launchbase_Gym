@@ -2,46 +2,32 @@
 
 {% block content %}
 
-    <form class="card" method="POST" action="/instructors">
+    <div class="card table-container">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <th>Instructors</th>
+                    <th>Work-related field</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
 
-        <section class="avatar" style="background: url(https://source.unsplash.com/collection/95556558/500x500) no-repeat center center / cover">
-        </section>
+                {% for instructor in instructors %}
 
-        <section class="details">
-            <h3>Details</h3>
+                <tr>
+                    <td><span style="background-image: url({{ instructor.avatar_url}})"></span> 
+                        {{ instructor.name }}</td>
+                    <td>{{ instructor.services }}</td>
+                    <td><a href="/instructors/{{ instructor.id }}">View</a></td>
+                    
+                </tr>
 
-            <div class="item">
-                <div>Instructor</div>
-                <div>Angela</div>
-            </div>
+                {% endfor %}
 
-            <div class="item">
-                <div>Age</div>
-                <div>24</div>
-            </div>
-
-            <div class="item">
-                <div>Gender</div>
-                <div>Female</div>
-            </div>
-
-            <div class="item">
-                <div>Work-related field</div>
-                <div>
-                    <span>Crossfit</span>
-                    <span>Run</span>
-                </div>
-            </div>
-
-            <div class="item">
-                <div>Since</div>
-                <div>24/10/2020</div>
-            </div>
-
-
-        </section>
-
-    </form>
+            </tbody>
+        </table>
+    </div>
     
 
 {% endblock content %}

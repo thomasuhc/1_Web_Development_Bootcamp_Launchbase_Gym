@@ -35,3 +35,17 @@ npm install npm-run-all -dev
 https://www.npmjs.com/package/method-override
 
  npm install method-override
+
+ https://www.npmjs.com/package/intl
+
+ npm install intl
+
+ https://techoverflow.net/2018/09/19/fixing-nodejs-intl-datetimeformat-not-formatting-properly-for-locales/
+
+ https://github.com/nodejs/node/issues/34484
+
+ https://github.com/nodejs/node/issues/13907
+
+ https://www.geeksforgeeks.org/javascript-date-now-method/
+
+ https://www.quanzhanketang.com/jsref/jsref_now.html
