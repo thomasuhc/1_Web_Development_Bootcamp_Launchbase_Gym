@@ -1,0 +1,66 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <form class="card" method="POST" action="/members">
+
+        <section class="avatar" style="background: url({{ member.avatar_url }}) no-repeat center center / cover">
+        </section>
+
+        <section class="details">
+            <h3>Details</h3>
+
+            <div class="item">
+                <div>Member name</div>
+                <div>{{ member.name }}</div>
+            </div>
+
+             <div class="item">
+                <div>Email</div>
+                <div>{{ member.email }}</div>
+            </div>
+
+            <div class="item">
+                <div>Date of Birth</div>
+                <div>{{ member.birth }}</div>
+            </div>
+
+            <div class="item">
+                <div>Gender</div>
+                <div>
+
+                    {% if member.gender == "M" %}
+                        Male
+                    {% elif member.gender == "F" %}
+                        Female
+                    {% else %}
+                         Lesbian, gay, bisexual, transgender and queer or questioning.
+                    {% endif %}
+                    
+                    </div>
+            </div>
+
+
+            <div class="item">
+                <div>Blood type</div>
+                <div>{{ member.blood}}</div>
+            </div>
+
+                 <div class="item">
+                <div>Weight (kg)</div>
+                <div>{{ member.weight}}</div>
+            </div>
+
+                 <div class="item">
+                <div>Height (cm)</div>
+                <div>{{ member.height}}</div>
+            </div>
+
+            <a href="/members/{{ member.id }}/edit" class="button">Edit</a>
+
+        </section>
+
+    </form>
+    
+
+{% endblock content %}

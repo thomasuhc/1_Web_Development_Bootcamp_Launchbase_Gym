@@ -1,10 +1,67 @@
 {
+  "members": [
+    {
+      "id": 1,
+      "avatar_url": "https://i.pinimg.com/originals/93/f3/5c/93f35ccecff1e0f972ebcb5ba4aeeb6d.jpg",
+      "name": "Lisa Joy",
+      "email": "lisa@gmail.com",
+      "birth": 477273600000,
+      "gender": "F",
+      "blood": "O+",
+      "weight": "68",
+      "height": "168"
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://lh3.googleusercontent.com/proxy/5BtT8ebAG4G4uXaaB-ooFHUsT0eiHw9JTvS_Oh8b6Tzmac9r-P-FQ5tVlzk0TkI4qunEZyFFyWn-zD_rSTfMrKAXRk28QvTRMeB9cCP6vYj1Lhg39rtU8xMZDr54DSiQ",
+      "name": "Anne May",
+      "email": "anne@gmail.com",
+      "birth": 562032000000,
+      "gender": "F",
+      "blood": "B+",
+      "weight": "65",
+      "height": "167"
+    },
+    {
+      "id": 3,
+      "avatar_url": "https://lh3.googleusercontent.com/proxy/UJ1VF-B3y_uwCwX3yOBah0QEAiT68C9-9M-v3MLHmq1USGd2CnWLnrYEYWBUf_crCuGCXRccIJqXtd7zbLOx1DHkYZwYFY5b4fJU9jjnkaxeaTiGPFYP8G47R8Ok1nS0hQ",
+      "name": "Emily Blunt",
+      "email": "emily@gmail.com",
+      "birth": 400377600000,
+      "gender": "F",
+      "blood": "B-",
+      "weight": "70",
+      "height": "168"
+    },
+    {
+      "id": 4,
+      "avatar_url": "https://i.pinimg.com/originals/d3/cc/77/d3cc77f4f54f4f9c85cf08dc351932c9.jpg",
+      "name": "Sharon Austin",
+      "email": "sharon@gmail.com",
+      "birth": 578534400000,
+      "gender": "F",
+      "blood": "A-",
+      "weight": "65",
+      "height": "178"
+    },
+    {
+      "id": 5,
+      "avatar_url": "https://i.pinimg.com/originals/86/e1/80/86e180fa6751f12a8b91c8aca77a00ad.jpg",
+      "name": "Olivia Wilde",
+      "email": "olivia@gmail.com",
+      "birth": 652752000000,
+      "gender": "F",
+      "blood": "O-",
+      "weight": "70",
+      "height": "169"
+    }
+  ],
   "instructors": [
     {
       "id": 1,
       "avatar_url": "https://i.imgur.com/OyfhmF9.jpg",
-      "name": "Super Blonde Fitness",
-      "birth": 1562457600000,
+      "name": "Ashely Molly",
+      "birth": 552614400000,
       "gender": "F",
       "services": "Tabata, Push-Ups, Lunges",
       "created_at": 1605245799955
@@ -19,40 +76,31 @@
       "created_at": 1605245963421
     },
     {
-      "id": "3",
-      "avatar_url": "https://pbs.twimg.com/media/DuzU31nUwAEsG_y.jpg",
-      "name": "Jeisao girl bicha e putinha",
-      "birth": 942105600000,
-      "gender": "M",
-      "services": "Aerobics, Push",
-      "created_at": 1605247840362
-    },
-    {
-      "id": "4",
+      "id": 3,
       "avatar_url": "https://thechive.com/wp-content/uploads/2020/09/32a8f3ddec0958d8e51384328e5539df_width-600.jpeg?quality=85&strip=info&w=400",
-      "name": "Rachel blond",
+      "name": "Rachel Miller",
       "birth": 478656000000,
       "gender": "F",
-      "services": "fwrfw, gregreter, vregretete",
+      "services": "Swimming, Biking, hills",
       "created_at": 1605299151565
     },
     {
-      "id": 6,
-      "avatar_url": "https://pbs.twimg.com/media/EYs3P9YWkAAwI_g.jpg",
-      "name": "Jeisao girl ",
-      "birth": 563414400000,
-      "gender": "LGBTQ+",
-      "services": "Aerobics, Push, Pull, Run",
-      "created_at": 1605300346736
-    },
-    {
-      "id": "8",
+      "id": 4,
       "avatar_url": "https://media.extratv.com/2017/06/01/laci-kay-somers-510x600.jpg",
-      "name": "Mila rock",
+      "name": "Mila Smith ",
       "birth": 940723200000,
       "gender": "F",
-      "services": "running, spin",
+      "services": "running, spin, Climbing, jogging",
       "created_at": 1605333478673
+    },
+    {
+      "id": 5,
+      "avatar_url": "https://i.pinimg.com/originals/03/2a/41/032a41a0da50427736cfb102267a624d.jpg",
+      "name": "Angela Jessy",
+      "birth": 413251200000,
+      "gender": "F",
+      "services": "Crunches, Bent-Over Row, Swimming",
+      "created_at": 1605416425761
     }
   ]
 }

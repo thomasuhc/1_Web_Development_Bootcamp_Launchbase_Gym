@@ -1,6 +1,6 @@
 const fs = require("fs");
-const data = require("./data.json")
-const { age, date } = require("./utils")
+const data = require("../data.json")
+const { age, date } = require("../utils")
 const Intl = require("intl")
 
 
@@ -56,7 +56,9 @@ exports.show = function(req, res) {
 
 
 
-
+exports.create = function(req, res) {
+    return res.render("instructors/create")
+}
 
 
 
@@ -118,7 +120,7 @@ exports.edit = function(req, res) {
 
     const instructor = {
         ...foundInstructor,
-        birth: date(foundInstructor.birth)
+        birth: date(foundInstructor.birth).iso
     }
 
     return res.render("instructors/edit", { instructor })
