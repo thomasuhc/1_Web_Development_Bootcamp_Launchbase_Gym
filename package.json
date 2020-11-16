@@ -4,7 +4,7 @@
   "description": "LaunchBase 2.0 Bootcamp Gym",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon src/server.js"
   },
   "author": "Chu",
   "license": "ISC",
