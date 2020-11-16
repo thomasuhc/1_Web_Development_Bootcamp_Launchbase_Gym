@@ -1,63 +1,61 @@
-const fs = require("fs");
-const data = require("../data.json")
-const { date } = require("../utils")
+const { age, date } = require("../../lib/utils")
 const Intl = require("intl")
 
+module.exports = {
+    index(req, res) {
+        return res.render("members/index")
+    },
+    create(req, res) {
+        return res.render("members/create")
+    },
+    post(req, res) {
 
+        const keys = Object.keys(req.body)
 
-exports.index = function(req, res) {
+    for(key of keys) {
 
-    return res.render("members/index", { members: data.members})
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-exports.show = function(req, res) {
-
-    const { id } = req.params;
-
-    const foundMember = data.members.find(function(member){
-        return member.id == id;
-    })
-
-    if(!foundMember) return res.send("Not found Members")
-
-
-
-    const member = {
-        ...foundMember,
-        birth: date(foundMember.birth).birthDay
+        if(req.body[key] == "")
+        return res.send("Fill all form")
     }
 
+        return
+    },
+    show(req, res) {
+        return
+    },
+    edit(req, res) {
 
-    return res.render("members/show", { member });
+        return
+    },
+    put(req, res) {
+
+        const keys = Object.keys(req.body)
+
+        for(key of keys) {
+    
+            if(req.body[key] == "")
+            return res.send("Fill all form")
+
+        return
+         }
+    },
+    delete(req, res) {
+
+        return
+    },
 }
 
 
+
+
+
+/* exports.index = function(req, res) {
+    return res.render("members/index", { members: data.members})
+}
 
 exports.create = function(req, res) {
     return res.render("members/create")
 }
-
-
-
-
-
-
 
 exports.post = function(req, res) {
 
@@ -69,8 +67,6 @@ exports.post = function(req, res) {
         return res.send("Fill all form")
     }
 
-
-
     birth = Date.parse(req.body.birth);
 
     let id = 1;
@@ -80,27 +76,36 @@ exports.post = function(req, res) {
         id = lastMember.id + 1;
     }
 
-
     data.members.push({
         id,
         ...req.body,
         birth
     })
 
-
     fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
         if(err) return res.send("File error");
 
         return res.redirect(`/members/${id}`);
     })
-
 };
 
+exports.show = function(req, res) {
 
+    const { id } = req.params;
 
+    const foundMember = data.members.find(function(member){
+        return member.id == id;
+    })
 
+    if(!foundMember) return res.send("Not found Members")
 
+    const member = {
+        ...foundMember,
+        birth: date(foundMember.birth).birthDay
+    }
 
+    return res.render("members/show", { member });
+}
 
 exports.edit = function(req, res) {
 
@@ -119,13 +124,6 @@ exports.edit = function(req, res) {
 
     return res.render("members/edit", { member })
 }
-
-
-
-
-
-
-
 
 exports.put = function(req, res) {
 
@@ -158,9 +156,6 @@ exports.put = function(req, res) {
     })
 }
 
-
-
-
 exports.delete = function(req, res) {
 
     const { id } = req.body;
@@ -176,6 +171,4 @@ exports.delete = function(req, res) {
 
         return res.redirect("/members")
     })
-
-
-}
+} */

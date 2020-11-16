@@ -1,69 +1,61 @@
-const fs = require("fs");
-const data = require("../data.json")
-const { age, date } = require("../utils")
+const { age, date } = require("../../lib/utils")
 const Intl = require("intl")
 
 
+module.exports = {
+    index(req, res) {
+        return res.render("instructors/index")
+    },
+    create(req, res) {
+        return res.render("instructors/create")
+    },
+    post(req, res) {
 
-exports.index = function(req, res) {
+        const keys = Object.keys(req.body)
 
-    return res.render("instructors/index", { instructors: data.instructors})
-}
+    for(key of keys) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-exports.show = function(req, res) {
-
-    const { id } = req.params;
-
-    const foundInstructor = data.instructors.find(function(instructor){
-        return instructor.id == id;
-    })
-
-    if(!foundInstructor) return res.send("Not found Instructors")
-
-
-
-    const instructor = {
-        ...foundInstructor,
-        age: age(foundInstructor.birth),
-        services: foundInstructor.services.split(","),
-        created_at: new Intl.DateTimeFormat('en-CA').format(foundInstructor.created_at),
+        if(req.body[key] == "")
+        return res.send("Fill all form")
     }
 
-    console.log(new Intl.DateTimeFormat('en-CA').format(foundInstructor.created_at))
+    let {avatar_url, birth, name, services, gender} = req.body;
 
-    console.log(instructor)
+        return
+    },
+    show(req, res) {
+        return
+    },
+    edit(req, res) {
 
+        return
+    },
+    put(req, res) {
 
-    return res.render("instructors/show", { instructor });
+        const keys = Object.keys(req.body)
+
+        for(key of keys) {
+    
+            if(req.body[key] == "")
+            return res.send("Fill all form")
+
+        return
+         }
+    },
+    delete(req, res) {
+
+        return
+    },
 }
 
 
-
+/* exports.index = function(req, res) {
+    return res.render("instructors/index", { instructors: data.instructors})
+}
 
 exports.create = function(req, res) {
     return res.render("instructors/create")
 }
-
-
-
-
-
 
 exports.post = function(req, res) {
 
@@ -102,11 +94,32 @@ exports.post = function(req, res) {
     //return res.send(req.body)
 };
 
+exports.show = function(req, res) {
+
+    const { id } = req.params;
+
+    const foundInstructor = data.instructors.find(function(instructor){
+        return instructor.id == id;
+    })
+
+    if(!foundInstructor) return res.send("Not found Instructors")
 
 
 
+    const instructor = {
+        ...foundInstructor,
+        age: age(foundInstructor.birth),
+        services: foundInstructor.services.split(","),
+        created_at: new Intl.DateTimeFormat('en-CA').format(foundInstructor.created_at),
+    }
+
+    console.log(new Intl.DateTimeFormat('en-CA').format(foundInstructor.created_at))
+
+    console.log(instructor)
 
 
+    return res.render("instructors/show", { instructor });
+}
 
 exports.edit = function(req, res) {
 
@@ -125,13 +138,6 @@ exports.edit = function(req, res) {
 
     return res.render("instructors/edit", { instructor })
 }
-
-
-
-
-
-
-
 
 exports.put = function(req, res) {
 
@@ -164,9 +170,6 @@ exports.put = function(req, res) {
     })
 }
 
-
-
-
 exports.delete = function(req, res) {
 
     const { id } = req.body;
@@ -182,6 +185,4 @@ exports.delete = function(req, res) {
 
         return res.redirect("/instructors")
     })
-
-
-}
+} */
