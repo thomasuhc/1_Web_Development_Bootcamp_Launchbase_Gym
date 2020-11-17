@@ -49,3 +49,16 @@ https://www.npmjs.com/package/method-override
  https://www.geeksforgeeks.org/javascript-date-now-method/
 
  https://www.quanzhanketang.com/jsref/jsref_now.html
+
+
+ https://www.postgresql.org/download/windows/
+
+ PostgreSQL Version 13
+
+ https://www.electronjs.org/apps/postbird
+
+ Postbird 0.8.4 (0.8.4)
+
+ https://www.npmjs.com/package/pg
+
+ npm install pg
