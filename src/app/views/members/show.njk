@@ -46,14 +46,19 @@
                 <div>{{ member.blood}}</div>
             </div>
 
-                 <div class="item">
+            <div class="item">
                 <div>Weight (kg)</div>
                 <div>{{ member.weight}}</div>
             </div>
 
-                 <div class="item">
+            <div class="item">
                 <div>Height (cm)</div>
                 <div>{{ member.height}}</div>
+            </div>
+
+              <div class="item">
+                <div>Student of</div>
+                <div>{{ member.instructor_name}}</div>
             </div>
 
             <a href="/members/{{ member.id }}/edit" class="button">Edit</a>
