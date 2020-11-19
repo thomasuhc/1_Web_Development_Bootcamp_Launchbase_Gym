@@ -9,7 +9,7 @@
             <a class="button" href="/instructors/create">New</a>
 
             <form action="/instructors" method="GET">
-                <input type="text" name="filter" placeholder="Search" value={{filter}}>
+                <input type="text" name="filter" placeholder="Search instructors" value={{filter}}>
                 <button type="submit">Filter</button>
             </form>
         </div>
@@ -42,6 +42,12 @@
 
             </tbody>
         </table>
+
+            <div class="pagination" 
+            data-page={{pagination.page}} 
+            data-total={{pagination.total}}
+            data-filter={{pagination.filter}}
+            ></div>
     </div>
     
 
