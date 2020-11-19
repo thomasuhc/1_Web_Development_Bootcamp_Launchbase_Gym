@@ -8,9 +8,33 @@ const Intl = require("intl")
 module.exports = {
     index(req, res) {
 
-        const { filter } = req.query
+        let { filter, page, limit } = req.query
 
-        if(filter) {
+
+            page = page || 1
+            limit = limit || 2
+            let offset = limit * (page - 1)
+
+            const params = {
+                filter,
+                page,
+                limit,
+                offset, 
+                callback(instructors) {
+
+                    const pagination = {
+                        filter, 
+                        total: Math.ceil(instructors[0].total / limit),
+                        page
+                    }
+
+                    return res.render("instructors/index", { instructors, pagination, filter  })
+                }
+            }
+
+            Instructor.paginate(params)
+
+/*         if(filter) {
 
             Instructor.findBy(filter, function(instructors) {
                 return res.render("instructors/index", { instructors, filter })
@@ -22,7 +46,7 @@ module.exports = {
                 return res.render("instructors/index", { instructors })
             })
             
-        }
+        } */
 
      
     },
@@ -90,6 +114,10 @@ module.exports = {
         })
     },
 }
+
+
+
+
 
 
 /* exports.index = function(req, res) {
