@@ -1,55 +1,53 @@
-{% extends "layout.njk" %}
+{% extends "layout.njk" %} {% block content %}
+<div class="card table-container">
+  <div class="header">
+    <a class="button" href="/members/create">New</a>
 
-{% block content %}
-    <div class="card table-container">
+    <form action="/members" method="GET">
+      <input
+        type="text"
+        name="filter"
+        placeholder="Search members"
+        value="{{ filter }}"
+      />
+      <button type="submit">Filter</button>
+    </form>
+  </div>
 
-        <div class="header">
+  <table width="100%">
+    <thead>
+      <tr>
+        <th>Members</th>
+        <th>Email</th>
+        <th>Weight</th>
+        <th>Height</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for member in members %}
 
-            <a class="button" href="/members/create">New</a>
+      <tr>
+        <td>
+          <span style="background-image: url({{ member.avatar_url }})"></span>
+          {{ member.name }}
+        </td>
+        <td>{{ member.email }}</td>
+        <td>{{ member.weight }}kg</td>
+        <td>{{ member.height }}cm</td>
+        <td><a href="/members/{{ member.id }}">View</a></td>
+      </tr>
 
-            <form action="/members" method="GET">
-                <input type="text" name="filter" placeholder="Search members" value={{filter}}>
-                <button type="submit">Filter</button>
-            </form>
-        </div>
+      {% endfor %}
+    </tbody>
+  </table>
 
-        <table width="100%">
-            <thead>
-                <tr>
-                    <th>Members</th>
-                    <th>Email</th>
-                    <th>Weight</th>
-                    <th>Height</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-
-                {% for member in members %}
-
-                <tr>
-                    <td><span style="background-image: url({{ member.avatar_url}})"></span> 
-                        {{ member.name }}</td>
-                    <td>{{ member.email }}</td>
-                     <td>{{ member.weight }}kg</td>
-                      <td>{{ member.height }}cm</td>
-                    <td><a href="/members/{{ member.id }}">View</a></td>
-                    
-                </tr>
-
-                {% endfor %}
-
-            </tbody>
-        </table>
-
-              
-            <div class="pagination" 
-            data-page={{pagination.page}} 
-            data-total={{pagination.total}}
-            data-filter={{pagination.filter}}
-            ></div>
-
-    </div>
-    
+  <div
+    class="pagination"
+    data-page="{{ pagination.page }}"
+    data-total="{{ pagination.total }}"
+    data-filter="{{ pagination.filter }}"
+  ></div>
+</div>
 
 {% endblock content %}

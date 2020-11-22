@@ -4,8 +4,7 @@
 
     <form class="card" method="POST" action="/members">
 
-        <section class="avatar" style="background: url({{ member.avatar_url }}) no-repeat center center / cover">
-        </section>
+        <section class="avatar" style="background: url({{ member.avatar_url }}) no-repeat center center / cover"></section>
 
         <section class="details">
             <h3>Details</h3>
@@ -15,7 +14,7 @@
                 <div>{{ member.name }}</div>
             </div>
 
-             <div class="item">
+            <div class="item">
                 <div>Email</div>
                 <div>{{ member.email }}</div>
             </div>
@@ -34,12 +33,11 @@
                     {% elif member.gender == "F" %}
                         Female
                     {% else %}
-                         Lesbian, gay, bisexual, transgender and queer or questioning.
+                        Lesbian, gay, bisexual, transgender and queer or questioning.
                     {% endif %}
-                    
-                    </div>
-            </div>
 
+                </div>
+            </div>
 
             <div class="item">
                 <div>Blood type</div>
@@ -56,7 +54,7 @@
                 <div>{{ member.height}}</div>
             </div>
 
-              <div class="item">
+            <div class="item">
                 <div>Student of</div>
                 <div>{{ member.instructor_name}}</div>
             </div>
@@ -66,6 +64,5 @@
         </section>
 
     </form>
-    
 
 {% endblock content %}
